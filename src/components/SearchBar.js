@@ -5,7 +5,7 @@ const SearchBar = () => {
         <div>
             <form>
                 <input type="text" />
-                <label>Search city</label>
+                <label>Search city </label>
             </form>
         </div>
     );
