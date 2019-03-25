@@ -1,14 +1,16 @@
 import React from 'react';
 
-const SearchBar = () => {
-    return (
-        <div>
-            <form>
-                <input type="text" />
-                <label>Search city </label>
-            </form>
-        </div>
-    );
+class SearchBar extends React.Component {
+    render() {
+        return (
+            <div>
+                <form>
+                    <input onChange={this.props.onInputChange} type="text" />
+                    <label>Search city </label>
+                </form>
+            </div>
+        );
+    };
 };
 
 export default SearchBar;
