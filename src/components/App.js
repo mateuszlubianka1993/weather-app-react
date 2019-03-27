@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import SearchBar from './SearchBar';
 import Header from './Header';
+import WeatherDisplay from './WeatherDisplay';
 
 class App extends React.Component {
   state = {
@@ -14,7 +15,8 @@ class App extends React.Component {
     humidity: '',
     clouds: '',
     sunrise: '',
-    sunset: ''
+    sunset: '',
+    error: false
   };
 
   onInputChange = (e) => {
@@ -28,15 +30,17 @@ class App extends React.Component {
     e.preventDefault();
     console.log('Submit');
     const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.inputValue}&APPID=26df753807a025c66570efc01c24fb39&units=metric`;
+    
     fetch(apiUrl)
       .then(response => {
         if(response.ok) {
           return response;
         }
-        throw Error('Error')
+        throw Error('Something went wrong, try again')
       })
       .then(response => response.json())
       .then(result => {
+        const today = new Date().toLocaleString();
         this.setState({
           cityName: this.state.inputValue,
           temp: result.main.temp,
@@ -44,11 +48,16 @@ class App extends React.Component {
           wind: result.wind.speed,
           humidity: result.main.humidity,
           clouds: result.clouds.all,
-          sunrise: result.sys.sunrise,
-          sunset: result.sys.sunset
+          sunrise: new Date(result.sys.sunrise*1000).toLocaleTimeString(),
+          sunset: new Date(result.sys.sunset*1000).toLocaleTimeString(),
+          date: today,
+          error: false
         });
       })
-      .catch(err => console.log(err))
+      .catch(err => {
+        this.setState({error: true})
+      })
+      
   };
 
   render() {
@@ -58,6 +67,9 @@ class App extends React.Component {
         <SearchBar 
         onInputChange={this.onInputChange}
         onFormSubmit={this.onFormSubmit}
+        />
+        <WeatherDisplay 
+        data={this.state}
         />
       </div>
     );
