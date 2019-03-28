@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+.display-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+}
+
+h3 {
+    font-size: 26px;
+    text-align: center;
+}
+
+.display-box {
+    border: 3px solid #fdf5fc;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    flex-flow: row wrap;
+    -webkit-box-shadow: 10px 15px 15px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 15px 15px 5px rgba(0,0,0,0.75);
+    box-shadow: 10px 15px 15px 5px rgba(0,0,0,0.75);
+}
+
+.display-header {
+    border-bottom: 1px solid #fdf5fc;
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 100%;
+    font-size: 26px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.temp-box {
+    flex-basis: 35%;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.other-detail-box {
+    flex-basis: 65%;
+}
+
+.temp-detail {
+    height: 75px;
+    width: 75px;
+    font-size: 48px;
+    padding: 10px;
+}
+
+.temp-icon {
+    border: 2px solid #fdf5fc;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.other-detail-box {
+    border-left: 2px solid #fdf5fc;
+    padding: 15px;
+}
+
+.sun-rise-set {
+    font-size: 24px;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fdf5fc;
+}
+
+.weater-detail-div-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: start;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.weather-detail-div {
+    flex-basis: 50%;
+    padding-top: 10px;
+}

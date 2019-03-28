@@ -43,7 +43,7 @@ class App extends React.Component {
         const today = new Date().toLocaleString();
         this.setState({
           cityName: this.state.inputValue,
-          temp: result.main.temp,
+          temp: Math.round(result.main.temp),
           pressure: result.main.pressure,
           wind: result.wind.speed,
           humidity: result.main.humidity,
