@@ -1,5 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  /* font-family: ; */
+  background-image: url("./img/abstract-art-background-1040473.jpg");
+  background-size: cover;
+  color: #fdf5fc;
+  font-family: 'Ubuntu', sans-serif;
+
 }
