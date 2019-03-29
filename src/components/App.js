@@ -29,7 +29,7 @@ class App extends React.Component {
   onFormSubmit = (e) => {
     e.preventDefault();
     console.log('Submit');
-    const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.inputValue}&APPID=26df753807a025c66570efc01c24fb39&units=metric`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${this.state.inputValue}&APPID=26df753807a025c66570efc01c24fb39&units=metric`;
     
     fetch(apiUrl)
       .then(response => {
