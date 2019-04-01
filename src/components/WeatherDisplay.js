@@ -1,9 +1,9 @@
 import React from 'react';
 import './WeatherDisplay.css';
+import './WeatherDisplayRWD.css';
 
 class WeatherDisplay extends React.Component{
-
-    
+   
 render() {
     if(this.props.data.error) {
         return (
