@@ -1,0 +1,123 @@
+@media (min-width: 992px) and (max-width: 1199px) {
+    .display-container {
+        width: 95%;
+    }
+    .display-box {
+        width: 70%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .display-container {
+        padding-top: 20px;
+    }
+    .display-box {
+        width: 85%;
+        border-width: 2px;
+    }
+    .temp-box {
+        flex-basis: 40%;
+        padding-left: 12px;
+    }
+    
+    .other-detail-box {
+        flex-basis: 60%;
+    }
+    .temp-detail {
+        height: 70px;
+        width: 70px;
+        font-size: 40px;
+        padding: 10px;
+    }
+    .sun-rise-set {
+        font-size: 22px;
+        padding-bottom: 5px;
+    }
+} 
+@media (max-width: 767px) {
+    .display-container {
+        padding-top: 20px;
+    }
+    .display-box {
+        width: 95%;
+        border-width: 2px;
+    }
+    .temp-box {
+        flex-basis: 40%;
+        padding-left: 5px;
+    }
+    
+    .other-detail-box {
+        flex-basis: 60%;
+    }
+    .temp-detail {
+        height: 65px;
+        width: 65px;
+        font-size: 38px;
+        padding: 8px;
+    }
+    .sun-rise-set {
+        font-size: 18px;
+        padding-bottom: 5px;
+    }
+    .weater-detail-div-container {
+        padding: 8px;
+        font-size: 18px;
+    }
+} 
+
+@media (min-width: 480px) and (max-width: 599px) {
+    .display-container {
+        width: 85%;
+    }
+    .weather-detail-box {
+        flex-basis: 100%;
+    }
+    .other-detail-box {
+        border-top: 1px solid #fdf5fc;
+        border-left: 0;
+    }
+    .temp-box {
+        justify-content: center;
+        padding-left: 0;
+        padding: 15px;
+    }
+    .display-header {
+        font-size: 22px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+    .weater-detail-div-container {
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .display-container {
+        width: 95%;
+    }
+    .weather-detail-box {
+        flex-basis: 100%;
+    }
+    .other-detail-box {
+        border-top: 1px solid #fdf5fc;
+        border-left: 0;
+    }
+    .temp-box {
+        justify-content: center;
+        padding-left: 0;
+        padding: 10px;
+    }
+    .display-header {
+        font-size: 20px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+    .weater-detail-div-container {
+        text-align: center;
+        padding: 8px;
+        font-size: 20px;
+    }
+}

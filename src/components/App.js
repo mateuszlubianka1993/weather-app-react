@@ -20,7 +20,6 @@ class App extends React.Component {
   };
 
   onInputChange = (e) => {
-    // console.log(e.target.value);
     this.setState({
       inputValue: e.target.value
     });
