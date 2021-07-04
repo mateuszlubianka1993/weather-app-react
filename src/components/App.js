@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import SearchBar from './SearchBar';
 import Header from './Header';
 import WeatherDisplay from './WeatherDisplay';
